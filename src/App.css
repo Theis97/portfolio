@@ -2,6 +2,30 @@
   text-align: center;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.nav a {
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.nav a:hover {
+  background-color: rgb(120, 120, 120);
+}
+.nav a:active {
+  background-color: white;
+}
+
 .title {
   background-color: rgb(85, 0, 51);
   color: white;
@@ -29,5 +53,5 @@
 
 .contact {
   background-color: rgb(74, 0, 74);
-  min-height: 50vh;
+  min-height: 100vh;
 }
