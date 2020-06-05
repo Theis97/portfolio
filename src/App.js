@@ -15,13 +15,13 @@ function App() {
       <div className="title">
         <h1>Susan Theis</h1>
       </div>
-      <div className="overview">
+      <div id="overview" className="overview">
       </div>
-      <div className="projects">
+      <div id="projects" className="projects">
       </div>
-      <div className="interests">
+      <div id="interests" className="interests">
       </div>
-      <div className="contact">
+      <div id="contact" className="contact">
       </div>
     </div>
   );
