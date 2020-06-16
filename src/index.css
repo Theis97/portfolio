@@ -1,7 +1,11 @@
-html {
-  /* This doesn't work on Safari or Internet Explorer */
-  scroll-behavior: smooth;
+html,body
+{
+    height: 100%;
+    overflow-x: hidden;
+    /* This doesn't work on Safari or Internet Explorer */
+    scroll-behavior: smooth;
 }
+
 
 body {
   margin: 0;

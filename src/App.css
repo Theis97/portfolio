@@ -31,9 +31,10 @@
   color: white;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: 10em;
+  justify-content: space-evenly;
+  font-size: 5em;
 }
 
 .overview {
@@ -53,5 +54,11 @@
 
 .contact {
   background-color: rgb(74, 0, 74);
-  min-height: 100vh;
+  color: white;
+  font-size: 3em;
+  padding: 10px;
+}
+
+.contact p {
+  margin: 0px;
 }

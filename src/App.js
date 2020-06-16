@@ -14,6 +14,11 @@ function App() {
       </nav>
       <div className="title">
         <h1>Susan Theis</h1>
+        <ul>
+          <li>Descriptor 1</li>
+          <li>Descriptor 2</li>
+          <li>Descriptor 3</li>
+        </ul>
       </div>
       <div id="overview" className="overview">
       </div>
@@ -22,6 +27,7 @@ function App() {
       <div id="interests" className="interests">
       </div>
       <div id="contact" className="contact">
+        <p> Want to get in touch? Email me: sttheis97@gmail.com</p>
       </div>
     </div>
   );
