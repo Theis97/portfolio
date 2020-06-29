@@ -1,5 +1,6 @@
 import React from 'react';
 import placeholder from './assets/placeholder.png';
+import { ProjectDisplay } from './features/project_display/ProjectDisplay.js';
 import './App.css';
 
 function App() {
@@ -11,15 +12,15 @@ function App() {
         <h2><a href="#interests">Interests</a></h2>
         <h2><a href="#contact">Contact</a></h2>
       </nav>
-      <div className="title">
+      <section className="title">
         <h1>Susan Theis</h1>
         <ul>
           <li>Descriptor 1</li>
           <li>Descriptor 2</li>
           <li>Descriptor 3</li>
         </ul>
-      </div>
-      <div id="overview" className="overview">
+      </section>
+      <section id="overview" className="overview">
         <div className="about">
           <h2>About me</h2>
           <p>
@@ -35,15 +36,17 @@ function App() {
             sagittis urna pellentesque in. Donec vel elit eu eros scelerisque sodales.
           </p>
         </div>
-        <img src={placeholder} className="portrait" alt="A photo of me" />
-      </div>
-      <div id="projects" className="projects">
-      </div>
-      <div id="interests" className="interests">
-      </div>
-      <div id="contact" className="contact">
-        <p> Want to get in touch? Email me: sttheis97@gmail.com</p>
-      </div>
+        <img src={placeholder} className="portrait" alt="Me" />
+      </section>
+      <section id="projects" className="projects">
+        <ProjectDisplay/>
+      </section>
+      <section id="interests" className="interests">
+      </section>
+      <section id="contact" className="contact">
+        <p> Want to get in touch?</p>
+        <p>✉ sttheis97@gmail.com</p>
+      </section>
     </div>
   );
 }

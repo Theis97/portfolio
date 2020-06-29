@@ -1,0 +1,15 @@
+.display {
+  text-align: center;
+  font-size: 2em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+}
+
+.arrow {
+  font: inherit;
+}
