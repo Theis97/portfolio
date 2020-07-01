@@ -11,17 +11,34 @@ const cards = [
   {title: "Card #6", desc: "This is a description of the project"},
   {title: "Card #7", desc: "This is a description of the project"}
 ]
-const numCardsToShow = 3;
 
-export function ProjectDisplay() {
-  return (
-    <div className={styles.display}>
-      <h2>My Projects</h2>
-      <div className={styles.container}>
-        <button className={styles.arrow}>&lt;</button>
-        {cards.map((card) => <ProjectCard title={card.title} desc={card.desc}/>)}
-        <button className={styles.arrow}>&gt;</button>
+export class ProjectDisplay extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {startIndex: 0, numCardsToShow: 3};
+  }
+
+  handleClick(direction) {
+    const newIndex = this.state.startIndex + (direction * this.state.numCardsToShow);
+    if(newIndex >= 0 && newIndex <= cards.length) {
+      this.setState({
+        startIndex: newIndex
+      });
+    }
+  }
+
+  render() {
+    const cardsToShow = cards.slice(this.state.startIndex, this.state.startIndex + this.state.numCardsToShow);
+
+    return (
+      <div className={styles.display}>
+        <h2>My Projects</h2>
+        <div className={styles.container}>
+          <button onClick={() => this.handleClick(-1)} className={styles.arrow}>&lt;</button>
+          {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
+          <button onClick={() => this.handleClick(1)} className={styles.arrow}>&gt;</button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }

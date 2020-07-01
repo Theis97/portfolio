@@ -13,7 +13,10 @@ function App() {
         <h2><a href="#contact">Contact</a></h2>
       </nav>
       <section className="title">
-        <h1>Susan Theis</h1>
+        <div>
+          <h1>Susan</h1>
+          <h1>Theis</h1>
+        </div>
         <ul>
           <li>Descriptor 1</li>
           <li>Descriptor 2</li>
