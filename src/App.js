@@ -45,6 +45,7 @@ function App() {
         <ProjectDisplay/>
       </section>
       <section id="interests" className="interests">
+        <h2>My (other) Interests</h2>
       </section>
       <section id="contact" className="contact">
         <p> Want to get in touch?</p>

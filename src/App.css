@@ -62,8 +62,11 @@
 }
 
 .interests {
+  text-align: center;
   background-color: rgb(243, 214, 232);
   min-height: 100vh;
+  padding: 10px;
+  font-size: 2em;
 }
 
 .contact {

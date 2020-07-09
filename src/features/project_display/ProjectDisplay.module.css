@@ -12,5 +12,12 @@
 }
 
 .arrow {
-  font: inherit;
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 3em;
+  outline: none;
+  user-select: none;
 }
