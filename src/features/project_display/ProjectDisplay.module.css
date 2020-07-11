@@ -6,8 +6,8 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 80%;
 }
 
@@ -17,7 +17,16 @@
   color: white;
   cursor: pointer;
   font-family: monospace;
-  font-size: 3em;
+  font-size: 2.5em;
   outline: none;
+  transition: all 0.3s;
   user-select: none;
+  height: 100px;
+  width: 100px;
+}
+.arrow:hover {
+  font-size: 3em;
+}
+.arrow:active {
+  font-size: 2em;
 }

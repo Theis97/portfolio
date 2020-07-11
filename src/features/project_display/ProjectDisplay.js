@@ -20,7 +20,7 @@ export class ProjectDisplay extends React.Component {
 
   handleClick(direction) {
     const newIndex = this.state.startIndex + (direction * this.state.numCardsToShow);
-    if(newIndex >= 0 && newIndex <= cards.length) {
+    if(newIndex >= 0 && newIndex < cards.length) {
       this.setState({
         startIndex: newIndex
       });
