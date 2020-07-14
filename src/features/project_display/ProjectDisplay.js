@@ -29,14 +29,28 @@ export class ProjectDisplay extends React.Component {
 
   render() {
     const cardsToShow = cards.slice(this.state.startIndex, this.state.startIndex + this.state.numCardsToShow);
+    const leftButtonDisable = this.state.startIndex <= 0;
+    const rightButtonDisable = this.state.startIndex + this.state.numCardsToShow >= cards.length;
 
     return (
       <div className={styles.display}>
         <h2>My Projects</h2>
         <div className={styles.container}>
-          <button onClick={() => this.handleClick(-1)} className={styles.arrow}>&lt;</button>
+          <button
+            className={styles.arrow + (leftButtonDisable ? "" : " " + styles.enabled)}
+            disabled={leftButtonDisable}
+            onClick={() => this.handleClick(-1)}
+          >
+            &lt;
+          </button>
           {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
-          <button onClick={() => this.handleClick(1)} className={styles.arrow}>&gt;</button>
+          <button
+            className={styles.arrow + (rightButtonDisable ? "" : " " + styles.enabled)}
+            disabled={rightButtonDisable}
+            onClick={() => this.handleClick(1)}
+          >
+            &gt;
+          </button>
         </div>
       </div>
     );

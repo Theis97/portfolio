@@ -15,18 +15,22 @@
   background-color: transparent;
   border-style: none;
   color: white;
-  cursor: pointer;
   font-family: monospace;
   font-size: 2.5em;
+  opacity: 50%;
   outline: none;
   transition: all 0.3s;
   user-select: none;
   height: 100px;
   width: 100px;
 }
-.arrow:hover {
+.arrow.enabled {
+  cursor: pointer;
+  opacity: 100%;
+}
+.arrow.enabled:hover {
   font-size: 3em;
 }
-.arrow:active {
+.arrow.enabled:active {
   font-size: 2em;
 }
