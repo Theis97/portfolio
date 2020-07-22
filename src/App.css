@@ -36,6 +36,9 @@
   text-align: center;
   margin: 0px;
 }
+.title ul {
+  list-style: '- ';
+}
 
 .overview {
   display: flex;
@@ -44,11 +47,14 @@
   justify-content: space-evenly;
   background-color: rgb(255, 219, 196);
   min-height: 100vh;
-  padding: 10px;
+  padding: 25px;
   font-size: 1.5em;
 }
+.overview .portrait {
+  margin: 55px 20px 20px 0px;
+}
 .overview div {
-  max-width: 50%;
+  max-width: 600px;
 }
 .overview p {
   text-align: justify;
@@ -57,7 +63,7 @@
 .projects {
   background-color: rgb(138, 28, 0);
   height: 100vh;
-  padding: 10px;
+  padding: 25px;
   color: white;
 }
 
@@ -65,7 +71,7 @@
   text-align: center;
   background-color: rgb(243, 214, 232);
   min-height: 100vh;
-  padding: 10px;
+  padding: 25px;
   font-size: 2em;
 }
 
@@ -74,5 +80,5 @@
   background-color: rgb(74, 0, 74);
   color: white;
   font-size: 2em;
-  padding: 10px;
+  padding: 25px;
 }

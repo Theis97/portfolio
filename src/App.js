@@ -24,6 +24,7 @@ function App() {
         </ul>
       </section>
       <section id="overview" className="overview">
+        <img src={placeholder} className="portrait" alt="Me" />
         <div className="about">
           <h2>About me</h2>
           <p>
@@ -39,7 +40,6 @@ function App() {
             sagittis urna pellentesque in. Donec vel elit eu eros scelerisque sodales.
           </p>
         </div>
-        <img src={placeholder} className="portrait" alt="Me" />
       </section>
       <section id="projects" className="projects">
         <ProjectDisplay/>
