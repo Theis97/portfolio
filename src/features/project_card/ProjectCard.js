@@ -1,11 +1,17 @@
 import React from 'react';
 import styles from './ProjectCard.module.css';
 
-export function ProjectCard(props) {
-  return (
-    <div className={styles.card}>
-      <h3>{props.title}</h3>
-      <p>{props.desc}</p>
-    </div>
-  );
+export class ProjectCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className={styles.card}>
+        <h3>{this.props.title}</h3>
+        <p>{this.props.desc}</p>
+      </div>
+    );
+  }
 }

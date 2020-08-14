@@ -34,3 +34,23 @@
 .arrow.enabled:active {
   font-size: 2em;
 }
+
+
+.cardWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.entering {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 100%;
+    }
+}

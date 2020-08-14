@@ -16,6 +16,7 @@ export class ProjectDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {startIndex: 0, numCardsToShow: 3};
+    this.wrapperRef = React.createRef();
   }
 
   handleClick(direction) {
@@ -25,6 +26,13 @@ export class ProjectDisplay extends React.Component {
         startIndex: newIndex
       });
     }
+
+    this.wrapperRef.current.classList.add(styles.entering);
+    setTimeout(() => this.clearAnimation(), 1000);
+  }
+
+  clearAnimation() {
+    this.wrapperRef.current.classList.remove(styles.entering);
   }
 
   render() {
@@ -43,7 +51,9 @@ export class ProjectDisplay extends React.Component {
           >
             &lt;
           </button>
-          {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
+          <div ref={this.wrapperRef} className={styles.cardWrapper}>
+            {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
+          </div>
           <button
             className={styles.arrow + (rightButtonDisable ? "" : " " + styles.enabled)}
             disabled={rightButtonDisable}
