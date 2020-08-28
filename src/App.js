@@ -5,7 +5,6 @@ import './App.css';
 
 function App() {
   const birthday = new Date(868021200000); // July 4th, 1997 8am CST in UTC
-  console.log(birthday);
   const today = new Date();
   const age = Math.floor((today - birthday)/31556926000); // convert from milliseconds to years
 
@@ -14,7 +13,6 @@ function App() {
       <nav className="nav">
         <h2><a href="#overview">Overview</a></h2>
         <h2><a href="#projects">Projects</a></h2>
-        <h2><a href="#interests">Interests</a></h2>
         <h2><a href="#contact">Contact</a></h2>
       </nav>
       <section className="title">
@@ -35,7 +33,7 @@ function App() {
           <p>
             I'm a {age} year old Software Developer living in the Chicago suburbs.
             I got my Bachelor's degree in Computer Science from the University
-            of Illinois at Urbana-Champaign, where I was also a memeber of the
+            of Illinois at Urbana-Champaign, where I was also a member of the
             Marching Illini (Go Illini!). In addition to programming, I also enjoy
             drawing, writing, playing video games, and obsessing over my favorite
             shows with my friends.
@@ -53,12 +51,12 @@ function App() {
       <section id="projects" className="projects">
         <ProjectDisplay/>
       </section>
-      <section id="interests" className="interests">
-        <h2>My (other) Interests</h2>
-      </section>
       <section id="contact" className="contact">
-        <p>Want to get in touch?</p>
-        <p>✉ sttheis97@gmail.com</p>
+        <h2>Want to get in touch?</h2>
+        <ul>
+          <li>✉: sttheis97@gmail.com</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/susan-theis-260465187/">Profile</a></li>
+        </ul>
       </section>
     </div>
   );

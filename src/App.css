@@ -67,18 +67,18 @@
   color: white;
 }
 
-.interests {
-  text-align: center;
-  background-color: rgb(243, 214, 232);
-  min-height: 100vh;
-  padding: 25px;
-  font-size: 2em;
-}
-
 .contact {
-  text-align: center;
-  background-color: rgb(74, 0, 74);
+  display: flex;
+  flex-direction: column;
+  background-color: black;
   color: white;
   font-size: 2em;
   padding: 25px;
+}
+.contact h2 {
+  margin: auto;
+}
+.contact ul {
+  list-style-type: none;
+  margin: auto;
 }
