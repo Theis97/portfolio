@@ -3,8 +3,19 @@ import styles from './ProjectDisplay.module.css';
 import { ProjectCard } from '../project_card/ProjectCard.js';
 
 const cards = [
-  {title: "Card #1", desc: "This is a description of the project"},
-  {title: "Card #2", desc: "This is a description of the project"},
+  {
+    title: "Project Magic Forest",
+    desc: `Project Magic Forest is a virtual reality experience currently being
+          developed by a small self-led development team including myself. It
+          is a multiplayer experience set primarily in a forest with a soothing,
+          mystical atmosphere. Our goal is to create a virtual space that promotes
+          the user's mental health and helps them make meaningful connections
+          with other people. To accomplish this, we are we are working with the
+          Unity game engine, Mirror Networking, and Oculus headsets with touch
+          controls. Most of my work on the project consists of implementing
+          interactions and multiplayer functionality. More information coming soon!`
+  },
+  {title: "Card #2", desc: "This is a description of the project. I'm adding more text into this description for testing purposes. blah blah blah."},
   {title: "Card #3", desc: "This is a description of the project"},
   {title: "Card #4", desc: "This is a description of the project"},
   {title: "Card #5", desc: "This is a description of the project"},
