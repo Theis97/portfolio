@@ -21,13 +21,48 @@ const cards = [
   {title: "Card #5", desc: "This is a description of the project"},
   {title: "Card #6", desc: "This is a description of the project"},
   {title: "Card #7", desc: "This is a description of the project"}
-]
+];
+
+const largeScreen = { numCardsToShow: 3 };
+const mediumScreen = { numCardsToShow: 2, maxSize: 1200 };
+const smallScreen = { numCardsToShow: 1, maxSize: 700 };
 
 export class ProjectDisplay extends React.Component {
+
   constructor(props) {
     super(props);
-    this.state = {startIndex: 0, numCardsToShow: 3};
+
+    let cardsToShow = largeScreen.numCardsToShow;
+    if(window.innerWidth <= mediumScreen.maxSize) {
+      cardsToShow = mediumScreen.numCardsToShow;
+    }
+    if(window.innerWidth <= smallScreen.maxSize) {
+      cardsToShow = smallScreen.numCardsToShow;
+    }
+
+    this.state = {startIndex: 0, numCardsToShow: cardsToShow};
     this.wrapperRef = React.createRef();
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => this.checkCardsToShow());
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', () => this.checkCardsToShow());
+  }
+
+  checkCardsToShow() {
+    console.log("Checking screen size...");
+    let cardsToShow = largeScreen.numCardsToShow;
+    if(window.innerWidth <= mediumScreen.maxSize) {
+      cardsToShow = mediumScreen.numCardsToShow;
+    }
+    if(window.innerWidth <= smallScreen.maxSize) {
+      cardsToShow = smallScreen.numCardsToShow;
+    }
+
+    this.setState({numCardsToShow: cardsToShow});
   }
 
   handleClick(direction) {
