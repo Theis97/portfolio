@@ -1,16 +1,9 @@
 .display {
   display: flex;
-  flex-direction: column;
-  font-size: 2em;
-  height: 100%;
-  text-align: center;
-}
-
-.container {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  text-align: center;
 }
 
 .arrow {

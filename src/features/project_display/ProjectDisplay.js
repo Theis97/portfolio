@@ -53,7 +53,6 @@ export class ProjectDisplay extends React.Component {
   }
 
   checkCardsToShow() {
-    console.log("Checking screen size...");
     let cardsToShow = largeScreen.numCardsToShow;
     if(window.innerWidth <= mediumScreen.maxSize) {
       cardsToShow = mediumScreen.numCardsToShow;
@@ -67,7 +66,15 @@ export class ProjectDisplay extends React.Component {
 
   handleClick(direction) {
     const newIndex = this.state.startIndex + (direction * this.state.numCardsToShow);
-    if(newIndex >= 0 && newIndex < cards.length) {
+    if(newIndex < 0) {
+      this.setState({
+        startIndex: 0
+      });
+    } else if(newIndex >= cards.length) {
+      this.setState({
+        startIndex: cards.length - 1
+      });
+    } else {
       this.setState({
         startIndex: newIndex
       });
@@ -88,26 +95,23 @@ export class ProjectDisplay extends React.Component {
 
     return (
       <div className={styles.display}>
-        <h2>My Projects</h2>
-        <div className={styles.container}>
-          <button
-            className={styles.arrow + (leftButtonDisable ? "" : " " + styles.enabled)}
-            disabled={leftButtonDisable}
-            onClick={() => this.handleClick(-1)}
-          >
-            &lt;
-          </button>
-          <div ref={this.wrapperRef} className={styles.cardWrapper}>
-            {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
-          </div>
-          <button
-            className={styles.arrow + (rightButtonDisable ? "" : " " + styles.enabled)}
-            disabled={rightButtonDisable}
-            onClick={() => this.handleClick(1)}
-          >
-            &gt;
-          </button>
+        <button
+          className={styles.arrow + (leftButtonDisable ? "" : " " + styles.enabled)}
+          disabled={leftButtonDisable}
+          onClick={() => this.handleClick(-1)}
+        >
+          &lt;
+        </button>
+        <div ref={this.wrapperRef} className={styles.cardWrapper}>
+          {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
         </div>
+        <button
+          className={styles.arrow + (rightButtonDisable ? "" : " " + styles.enabled)}
+          disabled={rightButtonDisable}
+          onClick={() => this.handleClick(1)}
+        >
+          &gt;
+        </button>
       </div>
     );
   }

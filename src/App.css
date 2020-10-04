@@ -61,10 +61,16 @@
 }
 
 .projects {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(138, 28, 0);
   height: 100vh;
   padding: 25px;
   color: white;
+}
+.projects h2 {
+  font-size: 2em;
+  margin: auto;
 }
 
 .contact {

@@ -21,7 +21,7 @@ function App() {
           <h1>Theis</h1>
         </div>
         <ul>
-          <li>Descriptor 1</li>
+          <li>Developer</li>
           <li>Descriptor 2</li>
           <li>Descriptor 3</li>
         </ul>
@@ -49,6 +49,7 @@ function App() {
         </div>
       </section>
       <section id="projects" className="projects">
+        <h2>My Projects</h2>
         <ProjectDisplay/>
       </section>
       <section id="contact" className="contact">
