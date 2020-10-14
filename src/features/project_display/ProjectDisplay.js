@@ -15,7 +15,18 @@ const cards = [
           controls. Most of my work on the project consists of implementing
           interactions and multiplayer functionality. More information coming soon!`
   },
-  {title: "Card #2", desc: "This is a description of the project. I'm adding more text into this description for testing purposes. blah blah blah."},
+  {
+    title: "WebDoodler",
+    desc: `WebDoodler is a basic drawing app I built from scratch with pure
+          JavaScript, HTML, and CSS. I originally created it for my programming
+          studio final while in college. It was a solo project, and we had a
+          total of 4 weeks to work on it. It features a basic brush, an eraser,
+          a line tool, an eyedropper tool, a palette to save colors, variable
+          brush sizes, a selection tool, a layer system, an undo button, a few
+          basic filters, and a way to save images you made or upload your own
+          image to work with. I’m currently tweaking it to make it a bit more
+          presentable before sharing it with the world.`
+  },
   {title: "Card #3", desc: "This is a description of the project"},
   {title: "Card #4", desc: "This is a description of the project"},
   {title: "Card #5", desc: "This is a description of the project"},
@@ -81,7 +92,7 @@ export class ProjectDisplay extends React.Component {
     }
 
     this.wrapperRef.current.classList.add(styles.entering);
-    setTimeout(() => this.clearAnimation(), 1000);
+    setTimeout(() => this.clearAnimation(), 300);
   }
 
   clearAnimation() {
