@@ -16,15 +16,10 @@ function App() {
         <h2><a href="#contact">Contact</a></h2>
       </nav>
       <section className="title">
-        <div>
-          <h1>Susan</h1>
-          <h1>Theis</h1>
+        <div className="title-text">
+          <h1>Susan Theis</h1>
+          <small>Software Developer</small>
         </div>
-        <ul>
-          <li>Developer</li>
-          <li>Descriptor 2</li>
-          <li>Descriptor 3</li>
-        </ul>
       </section>
       <section id="overview" className="overview">
         <img src={placeholder} className="portrait" alt="Me" />
@@ -55,8 +50,8 @@ function App() {
       <section id="contact" className="contact">
         <h2>Want to get in touch?</h2>
         <ul>
-          <li>✉: sttheis97@gmail.com</li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/susan-theis-260465187/">Profile</a></li>
+          <li>✉: <a href="mailto:sttheis97@gmail.com">sttheis97@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/susan-theis-260465187/">Linkedin</a></li>
         </ul>
       </section>
     </div>

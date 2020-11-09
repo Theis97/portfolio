@@ -2,42 +2,82 @@
   display: flex;
   justify-content: space-evenly;
   color: white;
-  background-color: black;
-  position: -webkit-sticky;
+  background-color: hsl(324deg 80% 6%);
+
+  -webkit-position: sticky;
   position: sticky;
+
   top: 0;
+  z-index: 1;
+
+  font-size: 3.5vmin;
+  height: 10vh;
+}
+
+.nav h2 {
+  margin: auto;
 }
 
 .nav a {
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
+  border-radius: 3px;
+  background-color: hsl(324deg 10% 30%);
+  color: hsl(0deg 0% 95%);
+  padding: 3px;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 .nav a:hover {
-  background-color: rgb(120, 120, 120);
+  background-color: hsl(11deg 100% 42%);
 }
 .nav a:active {
   background-color: white;
 }
 
+@media (max-height: 479px) {
+  .nav {
+    height: 20vh;
+    font-size: 5vmin;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 500px) {
+  .nav {
+    height: 8vh;
+    font-size: 2vmin;
+  }
+}
+
 .title {
-  background-color: rgb(85, 0, 51);
+  background: linear-gradient(hsl(11deg 100% 42%), hsl(324deg 100% 32%));
   color: white;
-  min-height: 100vh;
+  height: 90vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 5em;
+  text-align: center;
 }
 .title h1 {
-  text-align: center;
   margin: 0px;
+  font-size: 25vmin;
 }
-.title ul {
-  list-style: '- ';
+.title small {
+  font-size: 6vmin;
+}
+.title-text {
+  margin: 25px;
+}
+
+@media (max-height: 479px) {
+  .title {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 500px) {
+  .title {
+    height: 92vh;
+  }
 }
 
 .overview {
@@ -45,13 +85,15 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(255, 219, 196);
-  min-height: 100vh;
+
+  background-color: hsl(43deg 100% 92%);
+
+  min-height: 90vh;
   padding: 25px;
   font-size: 1.5em;
 }
 .overview .portrait {
-  margin: 55px 20px 20px 0px;
+  margin: 20px;
 }
 .overview div {
   max-width: 600px;
@@ -63,28 +105,32 @@
 .projects {
   display: flex;
   flex-direction: column;
-  background-color: rgb(138, 28, 0);
-  height: 100vh;
-  padding: 25px;
+  background-color: hsl(11deg 80% 40%);
+  height: 87vh;
+  padding: 10vh 0 3vh 0;
   color: white;
 }
 .projects h2 {
-  font-size: 2em;
+  font-size: 3em;
   margin: auto;
+  padding: 10px 0 30px 0;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: hsl(324deg 80% 6%);
   color: white;
   font-size: 2em;
   padding: 25px;
+  text-align: center;
 }
 .contact h2 {
   margin: auto;
+  padding: 10px;
 }
 .contact ul {
   list-style-type: none;
   margin: auto;
+  padding: 0;
 }
