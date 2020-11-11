@@ -72,11 +72,26 @@
   .title {
     height: 80vh;
   }
+  .title h1 {
+    font-size: 20vmin;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 300px) {
+  .title h1 {
+    font-size: 30vmin;
+  }
 }
 
 @media (min-width: 1000px) and (min-height: 500px) {
   .title {
     height: 92vh;
+  }
+  .title h1 {
+    font-size: 20vmin;
+  }
+  .title small {
+    font-size: 5vmin;
   }
 }
 
@@ -89,17 +104,56 @@
   background-color: hsl(43deg 100% 92%);
 
   min-height: 90vh;
-  padding: 25px;
+  padding: 10vh 0 0 0;
   font-size: 1.5em;
 }
 .overview .portrait {
+  display: flex;
   margin: 20px;
+  height: 60vmin;
+  width: 60vmin;
 }
-.overview div {
-  max-width: 600px;
+.overview .about {
+  max-width: 50vw;
+  margin: 10px;
+}
+.overview h2 {
+  margin-top: 0;
 }
 .overview p {
   text-align: justify;
+}
+.overview img {
+  max-width:100%;
+  max-height:100%;
+  margin: auto;
+}
+
+@media (max-width: 600px), (max-height: 650px) {
+  .overview {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-height: 479px) {
+  .overview {
+    min-height: 80vh;
+    padding: 20vh 0 0 0;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-height: 350px) {
+  .overview {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1000px) and (min-height: 500px) {
+  .overview {
+    min-height: 92vh;
+    padding: 8vh 0 0 0;
+  }
 }
 
 .projects {

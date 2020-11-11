@@ -22,7 +22,9 @@ function App() {
         </div>
       </section>
       <section id="overview" className="overview">
-        <img src={placeholder} className="portrait" alt="Me" />
+        <div className="portrait">
+          <img src={placeholder} alt="Me" />
+        </div>
         <div className="about">
           <h2>About me</h2>
           <p>
