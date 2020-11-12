@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './ProjectDisplay.module.css';
 import { ProjectCard } from '../project_card/ProjectCard.js';
+import mfpic from '../../assets/magic-forest.jpg'
+import webpic from '../../assets/webdoodler.png'
+import placeholder from '../../assets/placeholder.png'
 
 const cards = [
   {
@@ -13,7 +16,8 @@ const cards = [
           with other people. To accomplish this, we are we are working with the
           Unity game engine, Mirror Networking, and Oculus headsets with touch
           controls. Most of my work on the project consists of implementing
-          interactions and multiplayer functionality. More information coming soon!`
+          interactions and multiplayer functionality. More information coming soon!`,
+    imageURL: mfpic
   },
   {
     title: "WebDoodler",
@@ -25,18 +29,24 @@ const cards = [
           brush sizes, a selection tool, a layer system, an undo button, a few
           basic filters, and a way to save images you made or upload your own
           image to work with. I’m currently tweaking it to make it a bit more
-          presentable before sharing it with the world.`
+          presentable before sharing it with the world.`,
+    imageURL: webpic
   },
-  {title: "Card #3", desc: "This is a description of the project"},
-  {title: "Card #4", desc: "This is a description of the project"},
-  {title: "Card #5", desc: "This is a description of the project"},
-  {title: "Card #6", desc: "This is a description of the project"},
-  {title: "Card #7", desc: "This is a description of the project"}
+  {
+    title: "This Website",
+    desc: "I built this website myself using React.",
+    imageURL: placeholder
+  },
+  {
+    title: "More to come, in the future...",
+    desc: `In the meantime, you can check out my github {TODO: PUT LINK HERE}`,
+    imageURL: placeholder
+  }
 ];
 
-const largeScreen = { numCardsToShow: 3 };
-const mediumScreen = { numCardsToShow: 2, maxSize: 1200 };
-const smallScreen = { numCardsToShow: 1, maxSize: 700 };
+const largeScreen = { numCardsToShow: 4 };
+const mediumScreen = { numCardsToShow: 4, maxSize: 1200 };
+const smallScreen = { numCardsToShow: 4, maxSize: 700 };
 
 export class ProjectDisplay extends React.Component {
 
@@ -106,23 +116,7 @@ export class ProjectDisplay extends React.Component {
 
     return (
       <div className={styles.display}>
-        <button
-          className={styles.arrow + (leftButtonDisable ? "" : " " + styles.enabled)}
-          disabled={leftButtonDisable}
-          onClick={() => this.handleClick(-1)}
-        >
-          &lt;
-        </button>
-        <div ref={this.wrapperRef} className={styles.cardWrapper}>
-          {cardsToShow.map((card, idx) => <ProjectCard key={idx} title={card.title} desc={card.desc}/>)}
-        </div>
-        <button
-          className={styles.arrow + (rightButtonDisable ? "" : " " + styles.enabled)}
-          disabled={rightButtonDisable}
-          onClick={() => this.handleClick(1)}
-        >
-          &gt;
-        </button>
+        {cardsToShow.map((card, idx) => <ProjectCard key={idx} content={card} title={card.title} desc={card.desc} imageURL={card.imageURL}/>)}
       </div>
     );
   }

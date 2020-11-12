@@ -1,18 +1,29 @@
 .card {
-  background-color: hsl(0deg 21% 31%);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 20px;
-  height: 60vh;
+  background-color: hsl(0, 0%, 10%);
   overflow: auto;
   font-size: 1em;
+  height: 95%;
+  width: 25%;
+  transition: all 0.4s;
+}
+
+.card:hover {
+  height: 100%;
+  width: 28%;
+  box-shadow: 0 0 10px black;
+  z-index: 2;
 }
 
 .card h3 {
   margin: 0;
+  text-align: center;
 }
 
 .card p {
   text-align: left;
   font-size: 1em;
+}
+
+.active {
+
 }

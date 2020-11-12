@@ -8,7 +8,7 @@ export class ProjectCard extends React.Component {
 
   render() {
     return (
-      <div className={styles.card}>
+      <div style={{backgroundImage: 'url(' + this.props.imageURL + ')'}} className={styles.card}>
         <h3>{this.props.title}</h3>
         <p>{this.props.desc}</p>
       </div>
