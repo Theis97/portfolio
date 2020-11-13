@@ -7,10 +7,16 @@ export class ProjectCard extends React.Component {
   }
 
   render() {
+    const imageURL = this.props.content.imageURL;
+    const title = this.props.content.title;
+    const desc = this.props.content.desc;
+
+    const currentStyle = this.props.isActive ? styles.card + " " + styles.active : styles.card;
+
     return (
-      <div style={{backgroundImage: 'url(' + this.props.imageURL + ')'}} className={styles.card}>
-        <h3>{this.props.title}</h3>
-        <p>{this.props.desc}</p>
+      <div onClick={this.props.cardClicked} style={{backgroundImage: 'url(' + imageURL + ')'}} className={currentStyle}>
+        <h3>{title}</h3>
+        <p>{desc}</p>
       </div>
     );
   }

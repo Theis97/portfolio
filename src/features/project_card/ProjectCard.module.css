@@ -1,5 +1,6 @@
 .card {
   background-color: hsl(0, 0%, 10%);
+  background-size: cover;
   overflow: auto;
   font-size: 1em;
   height: 95%;
@@ -8,10 +9,10 @@
 }
 
 .card:hover {
+  box-shadow: 0 0 10px black;
   height: 100%;
   width: 28%;
-  box-shadow: 0 0 10px black;
-  z-index: 2;
+  z-index: 1;
 }
 
 .card h3 {
@@ -24,6 +25,8 @@
   font-size: 1em;
 }
 
-.active {
-
+.card.active {
+  box-shadow: 0 0 10px black;
+  width: 100%;
+  z-index: 1;
 }

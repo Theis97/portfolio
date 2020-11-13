@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './ProjectDisplay.module.css';
 import { ProjectCard } from '../project_card/ProjectCard.js';
-import mfpic from '../../assets/magic-forest.jpg'
-import webpic from '../../assets/webdoodler.png'
+import mfpic from '../../assets/magic-forest-translucent.png'
+import webpic from '../../assets/webdoodler-transparent.png'
 import placeholder from '../../assets/placeholder.png'
 
 const cards = [
@@ -44,79 +44,31 @@ const cards = [
   }
 ];
 
-const largeScreen = { numCardsToShow: 4 };
-const mediumScreen = { numCardsToShow: 4, maxSize: 1200 };
-const smallScreen = { numCardsToShow: 4, maxSize: 700 };
-
 export class ProjectDisplay extends React.Component {
 
   constructor(props) {
     super(props);
-
-    let cardsToShow = largeScreen.numCardsToShow;
-    if(window.innerWidth <= mediumScreen.maxSize) {
-      cardsToShow = mediumScreen.numCardsToShow;
-    }
-    if(window.innerWidth <= smallScreen.maxSize) {
-      cardsToShow = smallScreen.numCardsToShow;
-    }
-
-    this.state = {startIndex: 0, numCardsToShow: cardsToShow};
-    this.wrapperRef = React.createRef();
+    this.state = { isCardActive: false, activeId: 0 };
   }
 
-  componentDidMount() {
-    window.addEventListener('resize', () => this.checkCardsToShow());
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', () => this.checkCardsToShow());
-  }
-
-  checkCardsToShow() {
-    let cardsToShow = largeScreen.numCardsToShow;
-    if(window.innerWidth <= mediumScreen.maxSize) {
-      cardsToShow = mediumScreen.numCardsToShow;
-    }
-    if(window.innerWidth <= smallScreen.maxSize) {
-      cardsToShow = smallScreen.numCardsToShow;
-    }
-
-    this.setState({numCardsToShow: cardsToShow});
-  }
-
-  handleClick(direction) {
-    const newIndex = this.state.startIndex + (direction * this.state.numCardsToShow);
-    if(newIndex < 0) {
-      this.setState({
-        startIndex: 0
-      });
-    } else if(newIndex >= cards.length) {
-      this.setState({
-        startIndex: cards.length - 1
-      });
-    } else {
-      this.setState({
-        startIndex: newIndex
-      });
-    }
-
-    this.wrapperRef.current.classList.add(styles.entering);
-    setTimeout(() => this.clearAnimation(), 300);
-  }
-
-  clearAnimation() {
-    this.wrapperRef.current.classList.remove(styles.entering);
+  cardClicked(id, e) {
+    this.setState((state) => ({
+      isCardActive: state.activeId !== id ? true : !state.isCardActive,
+      activeId: id
+    }));
   }
 
   render() {
-    const cardsToShow = cards.slice(this.state.startIndex, this.state.startIndex + this.state.numCardsToShow);
-    const leftButtonDisable = this.state.startIndex <= 0;
-    const rightButtonDisable = this.state.startIndex + this.state.numCardsToShow >= cards.length;
-
     return (
       <div className={styles.display}>
-        {cardsToShow.map((card, idx) => <ProjectCard key={idx} content={card} title={card.title} desc={card.desc} imageURL={card.imageURL}/>)}
+        {cards.map((card, id) => (
+          <ProjectCard
+            key={id}
+            content={card}
+            cardClicked={this.cardClicked.bind(this, id)}
+            isActive={this.state.isCardActive && (this.state.activeId === id)}
+          />)
+        )}
       </div>
     );
   }
