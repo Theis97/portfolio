@@ -16,7 +16,7 @@ export class ProjectCard extends React.Component {
     return (
       <div onClick={this.props.cardClicked} style={{backgroundImage: 'url(' + imageURL + ')'}} className={currentStyle}>
         <h3>{title}</h3>
-        <p>{desc}</p>
+        {this.props.isActive && <p>{desc}</p>}
       </div>
     );
   }

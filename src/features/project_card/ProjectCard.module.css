@@ -1,6 +1,7 @@
 .card {
   background-color: hsl(0, 0%, 10%);
   background-size: cover;
+  position: relative;
   overflow: auto;
   font-size: 1em;
   height: 95%;
@@ -18,15 +19,38 @@
 .card h3 {
   margin: 0;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  transition: all 0.6s;
 }
 
 .card p {
   text-align: left;
   font-size: 1em;
+  animation: fadein 2s ease-in; /* the timing should probably be tweaked here*/
+  text-align: justify;
+  position: absolute;
+  margin: 50px;
+  top: 20%;
 }
 
 .card.active {
   box-shadow: 0 0 10px black;
   width: 100%;
   z-index: 1;
+}
+
+.card.active h3 {
+  top: 10%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
