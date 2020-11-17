@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './ProjectDisplay.module.css';
 import { ProjectCard } from '../project_card/ProjectCard.js';
-import mfpic from '../../assets/magic-forest-translucent.png'
-import webpic from '../../assets/webdoodler-transparent.png'
-import placeholder from '../../assets/placeholder.png'
+import mfImg from '../../assets/mf-wallpaper.png'
+import doodleImg from '../../assets/webdoodler-doodle.png' // still want to replace this one
+import cloudImg from '../../assets/clouds.png'
+import starsImg from '../../assets/stars.png'
 
 const cards = [
   {
@@ -17,7 +18,7 @@ const cards = [
           Unity game engine, Mirror Networking, and Oculus headsets with touch
           controls. Most of my work on the project consists of implementing
           interactions and multiplayer functionality. More information coming soon!`,
-    imageURL: mfpic
+    imageURL: mfImg
   },
   {
     title: "WebDoodler",
@@ -30,17 +31,17 @@ const cards = [
           basic filters, and a way to save images you made or upload your own
           image to work with. I’m currently tweaking it to make it a bit more
           presentable before sharing it with the world.`,
-    imageURL: webpic
+    imageURL: doodleImg
   },
   {
     title: "This Website",
     desc: "I built this website myself using React.",
-    imageURL: placeholder
+    imageURL: cloudImg
   },
   {
     title: "More to come, in the future...",
     desc: `In the meantime, you can check out my github {TODO: PUT LINK HERE}`,
-    imageURL: placeholder
+    imageURL: starsImg
   }
 ];
 
