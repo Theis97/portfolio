@@ -8,17 +8,11 @@ export class ProjectCard extends React.Component {
   }
 
   onTransitionEnd(e) {
-    if(e.elapsedTime >= 0.6) {
-      this.setState((state) => ({isHeaderOnTop: !state.isHeaderOnTop}));
+    if(this.props.isActive) {
+      this.setState({isHeaderOnTop: true});
+    } else {
+      this.setState({isHeaderOnTop: false});
     }
-    // this bugs out if you keep clicking cards continously for longer than 0.6 seconds
-    // might be truly fixed with an onClick function to keep track of opening/closing
-    // (in projectDisplay because you can close a card by clicking on a different one)
-    // but this is enough for today
-
-    // ... there's already an onClick function. That I'm already using.
-    // That should help with this.
-    // OTL
   }
 
   render() {
