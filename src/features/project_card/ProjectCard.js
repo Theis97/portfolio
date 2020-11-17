@@ -15,6 +15,10 @@ export class ProjectCard extends React.Component {
     // might be truly fixed with an onClick function to keep track of opening/closing
     // (in projectDisplay because you can close a card by clicking on a different one)
     // but this is enough for today
+
+    // ... there's already an onClick function. That I'm already using.
+    // That should help with this.
+    // OTL
   }
 
   render() {
