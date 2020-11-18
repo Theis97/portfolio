@@ -1,49 +1,17 @@
 .display {
   display: flex;
   align-items: center;
+
   height: 100%;
+
   background-color: rgba(0,0,0,0.7);
 }
 
-.arrow {
-  background-color: transparent;
-  border-style: none;
-  color: white;
-  font-family: monospace;
-  font-size: 2.5em;
-  opacity: 50%;
-  outline: none;
-  text-shadow: black 0 0 5px;
-  transition: all 0.3s;
-  user-select: none;
-}
-.arrow.enabled {
-  cursor: pointer;
-  opacity: 100%;
-}
-.arrow.enabled:hover {
-  font-size: 3em;
-}
-.arrow.enabled:active {
-  font-size: 2em;
-}
 
+@media (max-width: 900px) {
+  .display {
+    flex-direction: column;
 
-.cardWrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.entering {
-  animation: fadein 0.8s;
-}
-
-@keyframes fadein {
-    from {
-      opacity: 0%;
-    }
-
-    to {
-      opacity: 100%;
-    }
+    height: auto;
+  }
 }
