@@ -16,17 +16,18 @@ export class ProjectCard extends React.Component {
   }
 
   render() {
-    const imageURL = this.props.content.imageURL;
-    const title = this.props.content.title;
-    const desc = this.props.content.desc;
 
     const currCardStyle = this.props.isActive ? styles.card + " " + styles.active : styles.card;
     const textStyle = styles.cardText + " " + (this.state.isHeaderOnTop ? styles.opened : "");
 
+    const imageURL = this.props.content.imageURL;
+    const title = this.props.content.title;
+    const desc = React.cloneElement(this.props.content.desc, {className: textStyle});
+
     return (
       <div onClick={this.props.cardClicked} style={{backgroundImage: 'url(' + imageURL + ')'}} className={currCardStyle}>
         <h3 onTransitionEnd={this.onTransitionEnd.bind(this)}>{title}</h3>
-        {this.props.isActive && <p className={textStyle}>{desc}</p>}
+        {this.props.isActive && desc}
       </div>
     );
   }

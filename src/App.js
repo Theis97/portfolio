@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholder from './assets/placeholder.png';
+import myFace from './assets/me.png';
 import { ProjectDisplay } from './features/project_display/ProjectDisplay.js';
 import './App.css';
 
@@ -23,7 +23,7 @@ function App() {
       </section>
       <section id="overview" className="overview">
         <div className="portrait">
-          <img src={placeholder} alt="Me" />
+          <img src={myFace} alt="Me" />
         </div>
         <div className="about">
           <h2>About me</h2>
