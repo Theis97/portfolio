@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ProjectDisplay.module.css';
 import { ProjectCard } from '../project_card/ProjectCard.js';
 import mfImg from '../../assets/mf-wallpaper.png'
-import doodleImg from '../../assets/webdoodler-doodle.png' // still want to replace this one
+import doodleImg from '../../assets/doodle3.png'
 import cloudImg from '../../assets/clouds.png'
 import starsImg from '../../assets/stars.png'
 

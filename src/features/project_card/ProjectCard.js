@@ -25,10 +25,10 @@ export class ProjectCard extends React.Component {
     const desc = React.cloneElement(this.props.content.desc, {className: textStyle});
 
     return (
-      <div onClick={this.props.cardClicked} style={{backgroundImage: 'url(' + imageURL + ')'}} className={currCardStyle}>
+      <button onClick={this.props.cardClicked} style={{backgroundImage: 'url(' + imageURL + ')'}} className={currCardStyle}>
         <h3 onTransitionEnd={this.onTransitionEnd.bind(this)}>{title}</h3>
         {this.props.isActive && desc}
-      </div>
+      </button>
     );
   }
 }
