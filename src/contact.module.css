@@ -1,0 +1,51 @@
+@value sizes: "./CSS-values/breakpoints.module.css";
+@value small, medium, large from sizes;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  padding: 25px;
+
+  font-size: 2em;
+
+  background-color: hsl(324deg 80% 6%);
+  color: white;
+}
+
+.contact h2 {
+  padding: 10px;
+  margin: auto;
+}
+
+.contact ul {
+  padding: 0;
+  margin: auto;
+
+  list-style-type: none;
+}
+
+.contact a {
+  text-decoration: none;
+
+  color: hsl(11deg 100% 70%);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact a:visited {
+  color: hsl(11deg 100% 50%);
+}
+
+@media small {
+  .contact h2 {
+    font-size: 1em;
+  }
+
+  .contact ul {
+    font-size: 0.65em;
+  }
+}

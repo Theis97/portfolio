@@ -1,4 +1,7 @@
-/* tweak these as needed */
 @value small: (max-width: 599px);
-@value medium: (min-width: 600px) and (max-width: 959px);
-@value large: (min-width: 960px);
+@value medium: (min-width: 600px) and (max-width: 999px);
+@value large: (min-width: 1000px);
+
+@value small-height: (max-height: 399px);
+@value medium-height: (min-height: 400px) and (max-height: 799px);
+@value large-height (min-height: 800px)

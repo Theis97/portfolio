@@ -2,6 +2,11 @@ import React from 'react';
 import myFace from './assets/me.png';
 import { ProjectDisplay } from './features/project_display/ProjectDisplay.js';
 import './App.css';
+import nav from './nav.module.css';
+import title from './title.module.css';
+import overview from './overview.module.css';
+import projects from './projects.module.css';
+import contact from './contact.module.css';
 
 function App() {
   const birthday = new Date(868021200000); // July 4th, 1997 8am CST in UTC
@@ -10,23 +15,23 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="nav">
+      <nav className={nav.nav}>
         <h2><a href="#overview">About Me</a></h2>
         <h2><a href="#projects">Projects</a></h2>
         <h2><a href="#contact">Contact</a></h2>
       </nav>
-      <section className="title">
-        <div className="title-text">
+      <section className={title.title}>
+        <div className={title.title_text}>
           <h1>Susan Theis</h1>
           <small>Software Developer</small>
         </div>
       </section>
-      <section id="overview" className="overview">
-        <div className="portrait">
+      <section id="overview" className={overview.overview}>
+        <h2>About Me</h2>
+        <div className={overview.portrait}>
           <img src={myFace} alt="Me" />
         </div>
-        <div className="about">
-          <h2>About me</h2>
+        <div className={overview.about}>
           <p>
             I'm a {age} year old Software Developer living in the Chicago suburbs.
             I got my Bachelor's degree in Computer Science from the University
@@ -41,18 +46,18 @@ function App() {
             bringing people joy. Lately, I've been working with a small team to
             create a virtual reality experience that aims to promote the user's
             mental health and let them connect with other people. You can read
-            more about it in the projects section.
+            more about it in the projects section below.
           </p>
         </div>
       </section>
-      <section id="projects" className="projects">
+      <section id="projects" className={projects.projects}>
         <h2>My Projects</h2>
         <ProjectDisplay/>
       </section>
-      <section id="contact" className="contact">
+      <section id="contact" className={contact.contact}>
         <h2>Want to get in touch?</h2>
         <ul>
-          <li>✉: <a href="mailto:sttheis97@gmail.com">sttheis97@gmail.com</a></li>
+          <li>✉ <a href="mailto:sttheis97@gmail.com">sttheis97@gmail.com</a></li>
           <li><a href="https://www.linkedin.com/in/susan-theis-260465187/">Linkedin</a></li>
         </ul>
       </section>

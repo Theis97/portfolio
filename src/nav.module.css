@@ -1,0 +1,57 @@
+@value sizes: "./CSS-values/breakpoints.module.css";
+@value small, medium, large, small-height, medium-height, large-height from sizes;
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  -webkit-position: sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  height: 10vh;
+
+  font-size: 3.5vmin;
+
+  background-color: hsl(324deg 80% 6%);
+  color: white;
+}
+
+.nav h2 {
+  margin: auto;
+}
+
+.nav a {
+  padding: 3px;
+  border-radius: 3px;
+
+  text-decoration: none;
+
+  background-color: hsl(324deg 10% 30%);
+  color: hsl(0deg 0% 95%);
+
+  transition: all 0.4s;
+}
+
+.nav a:hover {
+  background-color: hsl(11deg 100% 42%);
+}
+
+.nav a:active {
+  background-color: white;
+}
+
+@media small-height {
+  .nav {
+    height: 20vh;
+    font-size: 5vmin;
+  }
+}
+
+@media large {
+  .nav {
+    height: 8vh;
+    font-size: 2vmin;
+  }
+}

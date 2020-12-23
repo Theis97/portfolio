@@ -1,8 +1,12 @@
+@value sizes: "../../CSS-values/breakpoints.module.css";
+@value small, medium, large from sizes;
+
 .card {
   position: relative;
 
   width: 25%;
   height: 95%;
+  padding: 0;
   border: none;
   outline: none;
 
@@ -16,7 +20,6 @@
   transition: all 0.4s;
 }
 
-
 @media (max-width: 900px) {
   .card {
     width: 100%;
@@ -25,8 +28,7 @@
   }
 }
 
-
-.card:hover {
+.card:hover, .card:focus {
   width: 28%;
   height: 100%;
   z-index: 1;
@@ -34,15 +36,13 @@
   box-shadow: 0 0 10px black;
 }
 
-
 @media (max-width: 900px) {
-  .card:hover {
+  .card:hover, .card:focus {
     width: 100%;
     min-height: 12em;
     height: 28%;
   }
 }
-
 
 .card h3 {
   position: absolute;
@@ -53,9 +53,11 @@
 
   margin: 0;
 
+  font-size: 2em;
+  /* white-space: nowrap; */
+
   transition: all 0.6s;
 }
-
 
 .cardText {
   position: absolute;
@@ -63,19 +65,23 @@
 
   margin: 50px;
 
-  font-size: 1em;
+  font-size: 1.3em;
   text-align: justify;
 
   opacity: 0%;
 }
 
+@media small {
+  .cardText {
+    font-size: 1.2em;
+  }
+}
 
 .card.active {
   box-shadow: 0 0 10px black;
   width: 100%;
   z-index: 1;
 }
-
 
 @media (max-width: 900px) {
   .card.active {
@@ -84,23 +90,19 @@
     height: 100%;
   }
 
-
   .cardText {
-    margin: 10px;
+    margin: 20px;
   }
 }
-
 
 .card.active h3 {
   top: 10%;
 }
 
-
 .opened {
   animation: fadein 0.4s ease-in;
   opacity: 100%;
 }
-
 
 @keyframes fadein {
   from {

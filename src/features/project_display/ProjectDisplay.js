@@ -22,7 +22,7 @@ const cards = [
   },
   {
     title: "WebDoodler",
-    desc: <p>WebDoodler is a basic drawing app I built from scratch with pure
+    desc: <p>WebDoodler is a little drawing app I built from scratch with pure
           JavaScript, HTML, and CSS. I originally created it for my programming
           studio final while in college. It was a solo project, and we had a
           total of 4 weeks to work on it. It features a basic brush, an eraser,
@@ -35,12 +35,12 @@ const cards = [
   },
   {
     title: "This Website",
-    desc: <p>I built this website myself using React.</p>,
+    desc: <p>I built this website myself with React.</p>,
     imageURL: cloudImg
   },
   {
     title: "More to come, in the future...",
-    desc: <p>In the meantime, you can check out my <a href="https://github.com/Theis97">Github</a></p>,
+    desc: <p>Expect to see more projects listed here in the future! In the meantime, why not check out <a href="https://github.com/Theis97">my Github?</a> It has some of the code from the projects listed here, as well as smaller things that didn't make the cut for this showcase.</p>,
     imageURL: starsImg
   }
 ];

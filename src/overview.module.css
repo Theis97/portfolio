@@ -1,0 +1,95 @@
+@value sizes: "./CSS-values/breakpoints.module.css";
+@value small, medium, large, small-height from sizes;
+
+.overview {
+  display: grid;
+  grid-template-rows: 10% auto;
+  grid-template-columns: [start] 5% [left] 45% [right] 45%  5%[end];
+  place-items: center center;
+
+  padding: 10vh 0 5vh 0;
+
+  background-color: hsl(32deg 100% 95%);
+}
+
+.overview h2 {
+  grid-column-start: start;
+  grid-column-end: end;
+
+  text-align: center;
+
+  font-size: 3em;
+}
+
+.overview .portrait {
+  display: flex;
+
+  grid-row-start: 2;
+  grid-column-start: left;
+
+  margin: 20px;
+}
+
+.overview .about {
+  grid-row-start: 2;
+  grid-column-start: right;
+
+  padding: 0 1em 0 1em;
+  border-radius: 20px;
+  margin: 10px;
+
+  background-color: hsl(32 100% 97%);
+}
+
+.overview p {
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.overview img {
+  max-width: 85%;
+  max-height: 85%;
+  border: 10px solid hsl(23deg, 51%, 15%);
+  border-radius: 20px;
+  margin: auto;
+}
+
+@media medium, small {
+  .overview {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: 100%;
+    align-items: start;
+  }
+
+  .overview h2 {
+    grid-column-start: 1;
+  }
+
+  .overview .portrait {
+    grid-column-start: 1;
+  }
+
+  .overview .about {
+    grid-row-start: 3;
+    grid-column-start: 1;
+
+    margin: 25px;
+  }
+}
+
+@media medium {
+  .overview .portrait {
+    max-width: 60vw;
+  }
+
+  .overview .about {
+    max-width: 75vw;
+  }
+}
+
+@media small, small-height {
+  .overview p {
+    font-size: 1.2em;
+  }
+}
