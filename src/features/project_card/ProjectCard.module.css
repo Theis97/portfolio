@@ -2,7 +2,9 @@
 @value small, medium, large from sizes;
 
 .card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   width: 25%;
   height: 95%;
@@ -20,14 +22,6 @@
   transition: all 0.4s;
 }
 
-@media (max-width: 900px) {
-  .card {
-    width: 100%;
-    min-height: 10em;
-    height: 25%;
-  }
-}
-
 .card:hover, .card:focus {
   width: 28%;
   height: 100%;
@@ -36,21 +30,7 @@
   box-shadow: 0 0 10px black;
 }
 
-@media (max-width: 900px) {
-  .card:hover, .card:focus {
-    width: 100%;
-    min-height: 12em;
-    height: 28%;
-  }
-}
-
 .card h3 {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  text-align: center;
-
   margin: 0;
 
   font-size: 2em;
@@ -60,21 +40,10 @@
 }
 
 .cardText {
-  position: absolute;
-  top: 20%;
-
   margin: 50px;
 
   font-size: 1.3em;
   text-align: justify;
-
-  opacity: 0%;
-}
-
-@media small {
-  .cardText {
-    font-size: 1.2em;
-  }
 }
 
 .card.active {
@@ -83,32 +52,36 @@
   z-index: 1;
 }
 
+.card.active h3 {
+  top: 10%;
+}
+
+@media small {
+  .cardText {
+    font-size: 1.2em;
+  }
+}
+
 @media (max-width: 900px) {
-  .card.active {
+  .card {
     width: 100%;
-    min-height: 35em;
-    height: 100%;
+
+    overflow: hidden;
   }
 
   .cardText {
     margin: 20px;
   }
-}
 
-.card.active h3 {
-  top: 10%;
-}
-
-.opened {
-  animation: fadein 0.4s ease-in;
-  opacity: 100%;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0%;
+  .card h3 {
+    margin: 30px 0 30px 0;
   }
-  to {
-    opacity: 100%;
+
+  .card.active {
+    width: 100%;
+  }
+
+  .card:hover, .card:focus {
+    width: 100%;
   }
 }
