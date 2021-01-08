@@ -19,7 +19,7 @@
   background-size: cover;
   color: white;
 
-  transition: all 0.4s;
+  transition: all 0.6s;
 }
 
 .card:hover, .card:focus {
@@ -33,12 +33,11 @@
 .card h3 {
   font-size: 2em;
   /* white-space: nowrap; */
-
-  transition: all 0.6s;
 }
 
 .cardText {
-  display: none;
+  visibility: hidden;
+
   margin: 50px;
 
   font-size: 1.3em;
@@ -53,7 +52,7 @@
 }
 
 .card.active .cardText {
-  display: block;
+  visibility: visible;
 }
 
 
@@ -71,7 +70,6 @@
   }
 
   .cardText {
-    display: block;
     margin: 20px;
   }
 

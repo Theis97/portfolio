@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring, Transition, animated, config } from 'react-spring/renderprops';
+import { Spring, animated, config } from 'react-spring/renderprops';
 import styles from './ProjectCard.module.css';
 
 export class ProjectCard extends React.Component {
@@ -21,7 +21,7 @@ export class ProjectCard extends React.Component {
     if(window.innerWidth > 900) {
       header = <Spring
           native
-          config={{ precision: 1 }}
+          config={ config.slow }
           from={{ transform: this.props.isActive ? 'translateY(275px)' : 'translateY(0px)' }}
           to={{ transform: this.props.isActive ?  'translateY(0px)' : 'translateY(275px)' }}>
           {props => (<animated.h3 style={props}>{title}</animated.h3>)}
@@ -29,8 +29,9 @@ export class ProjectCard extends React.Component {
 
       body = <Spring
         native
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}>
+        config={{ friction: 45, delay: 600 }}
+        from={{ opacity: this.props.isActive ? 0 : 1 }}
+        to={{ opacity: this.props.isActive ? 1 : 0 }}>
         {props => (<animated.div style={props}>{desc}</animated.div>)}
       </Spring>;
 
