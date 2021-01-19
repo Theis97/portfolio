@@ -1,3 +1,6 @@
+@value sizes: "../../CSS-values/breakpoints.module.css";
+@value small, medium, large from sizes;
+
 .display {
   display: flex;
   align-items: center;
@@ -7,7 +10,7 @@
   background-color: hsla(0deg, 0%, 0%, 0.4);
 }
 
-@media (max-width: 900px) {
+@media small, medium {
   .display {
     flex-direction: column;
 

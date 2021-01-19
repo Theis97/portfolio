@@ -9,38 +9,38 @@ import starsImg from '../../assets/stars.png'
 const cards = [
   {
     title: "Project Magic Forest",
-    desc: <p>Project Magic Forest is a virtual reality experience currently being
-          developed by a small self-led development team including myself. It
-          is a multiplayer experience set primarily in a forest with a soothing,
-          mystical atmosphere. Our goal is to create a virtual space that promotes
-          the user's mental health and helps them make meaningful connections
-          with other people. To accomplish this, we are we are working with the
-          Unity game engine, Mirror Networking, and Oculus headsets with touch
-          controls. Most of my work on the project consists of implementing
-          interactions and multiplayer functionality. More information coming soon!</p>,
+    desc: <ul>
+            <li>Magic Forest is a multiplayer virtual reality game with a soothing, mystical atmosphere where players can reflect and store their thoughts while connecting with their friends.</li>
+            <li>The project is a collaboration between Brandon Dang, Dawn Nguyen, and myself.</li>
+            <li>Our goal is to create a virtual space that promotes the user's mental health and helps them make meaningful connections with other people.</li>
+            <li>We’re currently developing the project with Unity and Mirror Networking.</li>
+            <li>Most of my work on the project consists of implementing game mechanics and multiplayer functionality.</li>
+          </ul>,
     imageURL: mfImg
   },
   {
     title: "WebDoodler",
-    desc: <p>WebDoodler is a little drawing app I built from scratch with pure
-          JavaScript, HTML, and CSS. I originally created it for my programming
-          studio final while in college. It was a solo project, and we had a
-          total of 4 weeks to work on it. It features a basic brush, an eraser,
-          a line tool, an eyedropper tool, a palette to save colors, variable
-          brush sizes, a selection tool, a layer system, an undo button, a few
-          basic filters, and a way to save images you made or upload your own
-          image to work with. I’m currently tweaking it to make it a bit more
-          presentable before sharing it with the world.</p>,
+    desc: <ul>
+            <li>WebDoodler is a little drawing app I built from scratch with pure JavaScript, HTML, and CSS.</li>
+            <li>I originally created it for my programming studio final while in college. It was a solo project, and we had a total of 4 weeks to work on it.</li>
+            <li>It features a basic brush, an eraser, a line tool, an eyedropper tool, a palette to save colors, variable brush sizes, a selection tool, a layer system, an undo button, a few basic filters, and a way to save images you made or upload your own image to work with.</li>
+          </ul>,
     imageURL: doodleImg
   },
   {
     title: "This Website",
-    desc: <p>I built this website myself with React.</p>,
+    desc: <ul>
+            <li>I built this site with React. Most of the animations for these panels use <a href="https://www.react-spring.io/">react-spring</a>.</li>
+            <li>I'm still in the process of polishing the site up.</li>
+            <li>You can check out the source code for it <a href="https://github.com/Theis97">here</a> if you'd like.</li>
+          </ul>,
     imageURL: cloudImg
   },
   {
     title: "More to come, in the future...",
-    desc: <p>Expect to see more projects listed here in the future! In the meantime, why not check out <a href="https://github.com/Theis97">my Github?</a> It has some of the code from the projects listed here, as well as smaller things that didn't make the cut for this showcase.</p>,
+    desc: <ul>
+            <li>Expect to see more projects listed here in the future! In the meantime, why not check out <a href="https://github.com/Theis97">my Github?</a> It has some of the code from the projects listed here, as well as smaller things that didn't make the cut for this showcase.</li>
+          </ul>,
     imageURL: starsImg
   }
 ];

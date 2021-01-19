@@ -1,5 +1,5 @@
 @value sizes: "./CSS-values/breakpoints.module.css";
-@value small, medium, large, small-height from sizes;
+@value small, medium, large, small-height, XL from sizes;
 
 .overview {
   display: grid;
@@ -91,5 +91,11 @@
 @media small, small-height {
   .overview p {
     font-size: 1.2em;
+  }
+}
+
+@media XL {
+  .overview img {
+    width: 500px;
   }
 }

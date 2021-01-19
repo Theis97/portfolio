@@ -1,3 +1,6 @@
+@value sizes: "./CSS-values/breakpoints.module.css";
+@value small, medium, large, small-height, XL from sizes;
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -15,7 +18,7 @@
   font-size: 3em;
 }
 
-@media (max-width: 900px) {
+@media small, medium {
   .projects {
     height: auto;
   }
