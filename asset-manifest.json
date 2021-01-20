@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.33fbb46e.chunk.css",
+    "main.js": "/portfolio/static/js/main.655b4181.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.655b4181.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.1af43f22.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.1af43f22.js.map",
+    "static/js/2.79903a8b.chunk.js": "/portfolio/static/js/2.79903a8b.chunk.js",
+    "static/js/2.79903a8b.chunk.js.map": "/portfolio/static/js/2.79903a8b.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.33fbb46e.chunk.css.map": "/portfolio/static/css/main.33fbb46e.chunk.css.map",
+    "static/js/2.79903a8b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.79903a8b.chunk.js.LICENSE.txt",
+    "static/media/clouds.b0e2e19a.png": "/portfolio/static/media/clouds.b0e2e19a.png",
+    "static/media/doodle3.f3911286.png": "/portfolio/static/media/doodle3.f3911286.png",
+    "static/media/me.ec4aa9f8.png": "/portfolio/static/media/me.ec4aa9f8.png",
+    "static/media/mf-wallpaper.4a4758d3.png": "/portfolio/static/media/mf-wallpaper.4a4758d3.png",
+    "static/media/stars.edd0c59f.png": "/portfolio/static/media/stars.edd0c59f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1af43f22.js",
+    "static/js/2.79903a8b.chunk.js",
+    "static/css/main.33fbb46e.chunk.css",
+    "static/js/main.655b4181.chunk.js"
+  ]
+}
