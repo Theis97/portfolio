@@ -32,7 +32,7 @@ const cards = [
     desc: <ul>
             <li>I built this site with React. Most of the animations for these panels use <a href="https://www.react-spring.io/">react-spring</a>.</li>
             <li>I'm still in the process of polishing the site up.</li>
-            <li>You can check out the source code for it <a href="https://github.com/Theis97">here</a> if you'd like.</li>
+            <li>You can check out the source code for it <a href="https://github.com/Theis97/portfolio">here</a> if you'd like.</li>
           </ul>,
     imageURL: cloudImg
   },
