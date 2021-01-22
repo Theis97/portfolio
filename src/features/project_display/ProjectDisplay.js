@@ -11,7 +11,7 @@ const cards = [
     title: "Project Magic Forest",
     desc: <ul>
             <li>Magic Forest is a multiplayer virtual reality game with a soothing, mystical atmosphere where players can reflect and store their thoughts while connecting with their friends.</li>
-            <li>The project is a collaboration between Brandon Dang, Dawn Nguyen, and myself.</li>
+            <li>The project is a collaboration between <a href="http://dang-brandon.com/">Brandon Dang</a>, Dawn Nguyen, and myself.</li>
             <li>Our goal is to create a virtual space that promotes the user's mental health and helps them make meaningful connections with other people.</li>
             <li>We’re currently developing the project with Unity and Mirror Networking.</li>
             <li>Most of my work on the project consists of implementing game mechanics and multiplayer functionality.</li>
@@ -24,6 +24,7 @@ const cards = [
             <li>WebDoodler is a little drawing app I built from scratch with pure JavaScript, HTML, and CSS.</li>
             <li>I originally created it for my programming studio final while in college. It was a solo project, and we had a total of 4 weeks to work on it.</li>
             <li>It features a basic brush, an eraser, a line tool, an eyedropper tool, a palette to save colors, variable brush sizes, a selection tool, a layer system, an undo button, a few basic filters, and a way to save images you made or upload your own image to work with.</li>
+            <li>You can find the source code for it <a href="https://github.com/Theis97/Webdoodler">here</a>.</li>
           </ul>,
     imageURL: doodleImg
   },
