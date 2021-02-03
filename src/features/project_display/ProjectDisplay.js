@@ -54,10 +54,12 @@ export class ProjectDisplay extends React.Component {
   }
 
   cardClicked(id, e) {
-    this.setState((state) => ({
-      isCardActive: state.activeId !== id ? true : !state.isCardActive,
-      activeId: id
-    }));
+    if (e.target.tagName === "BUTTON" || e.target.tagName === "DIV") {
+      this.setState((state) => ({
+        isCardActive: state.activeId !== id ? true : !state.isCardActive,
+        activeId: id
+      }));
+    }
   }
 
   render() {

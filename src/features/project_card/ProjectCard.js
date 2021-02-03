@@ -18,7 +18,7 @@ export class ProjectCard extends React.Component {
 
     let header = <h3>{title}</h3>;
     let body = desc;
-    if(window.innerWidth > 999) {
+    if (window.innerWidth > 999) {
       header = <Spring
           native
           config={ config.slow }
