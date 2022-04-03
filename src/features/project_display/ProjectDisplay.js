@@ -11,7 +11,7 @@ const cards = [
     title: "Project Magic Forest",
     desc: <ul>
             <li>Magic Forest is a multiplayer virtual reality game with a soothing, mystical atmosphere where players can reflect and store their thoughts while connecting with their friends.</li>
-            <li>The project is a collaboration between <a href="http://dang-brandon.com/">Brandon Dang</a>, <a href="http://dawnuxi.com/">Dawn Nguyen</a>, and myself.</li>
+            <li>The project is a collaboration between <a href="http://dangbrandon.com/">Brandon Dang</a>, <a href="http://dawnuxi.com/">Dawn Nguyen</a>, and myself.</li>
             <li>Our goal is to create a virtual space that promotes the user's mental health and helps them make meaningful connections with other people.</li>
             <li>We’re currently developing the project with Unity and Mirror Networking.</li>
             <li>Most of my work on the project consists of implementing game mechanics and multiplayer functionality.</li>
