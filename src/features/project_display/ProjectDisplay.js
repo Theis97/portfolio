@@ -18,7 +18,7 @@ const cards = [
         </li>
         <li>
           The project was a collaboration between{" "}
-          <a href="http://dang-brandon.com/">Brandon Dang</a>,{" "}
+          <a href="http://dangbrandon.com/">Brandon Dang</a>,{" "}
           <a href="http://dawnuxi.com/">Dawn Nguyen</a>, and myself.
         </li>
         <li>
