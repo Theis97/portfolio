@@ -49,9 +49,8 @@ function App() {
           <p>
             My mission is to create software that makes the world a better
             place, whether that's by providing solutions for tough problems or
-            by simply bringing people joy. For the past 2 years, I've been
-            working as a UI developer with{" "}
-            <a href="https://www.wolflair.com/">Lone Wolf Development</a>.
+            by simply bringing people joy. Recently I've been working on a
+            project in NextJS, which you can read more about below.
           </p>
         </div>
       </section>

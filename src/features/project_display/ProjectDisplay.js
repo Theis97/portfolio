@@ -8,6 +8,17 @@ import starsImg from "../../assets/stars.png";
 
 const cards = [
   {
+    title: "Upcoming NextJS Project",
+    desc: (
+      <ul>
+        <li>
+          I'm currently working on a NextJS project! It's still in the early
+          stages right now, but expect to hear more info soon!
+        </li>
+      </ul>
+    ),
+  },
+  {
     title: "Project Magic Forest",
     desc: (
       <ul>
