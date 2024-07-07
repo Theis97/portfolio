@@ -29,7 +29,7 @@ const cards = [
         </li>
         <li>
           The project was a collaboration between{" "}
-          <a href="http://dangbrandon.com/">Brandon Dang</a>,{" "}
+          <a href="https://parseccentric.github.io/">Brandon Dang</a>,{" "}
           <a href="http://dawnuxi.com/">Dawn Nguyen</a>, and myself.
         </li>
         <li>
@@ -117,7 +117,11 @@ export class ProjectDisplay extends React.Component {
   }
 
   cardClicked(id, e) {
-    if (e.target.tagName === "BUTTON" || e.target.tagName === "DIV") {
+    if (
+      e.target.tagName !== "A" &&
+      e.target.tagName !== "UL" &&
+      e.target.tagName !== "LI"
+    ) {
       this.setState((state) => ({
         isCardActive: state.activeId !== id ? true : !state.isCardActive,
         activeId: id,
